@@ -9,13 +9,13 @@ def capitalizeLetter(letter):
 
 #Process User Input
 def readUserInput(updatedUserInput):
-    characterList = []  
+    characterList = []
     alphabet = False
     alphaFound = 0
     i = 0
     indexCapitalize = 0
 
-    #Reads through all characters in userInput to 
+    #Reads through all characters in userInput to
     #determine what will be capitalized and which will not.
     for char in updatedUserInput:
 
@@ -25,10 +25,10 @@ def readUserInput(updatedUserInput):
 
         #Capitalizes first found letter after every period
         elif char == '.' or char == '!'or char == '?':
-            characterOffset = i + 1 #adds one to i so the period found in the loop before, 
+            characterOffset = i + 1 #adds one to i so the period found in the loop before,
                                     #does not appear in the search loop below
             for subChar in updatedUserInput[characterOffset:]:
-                #Tests whether character after period is an alphabetical character and 
+                #Tests whether character after period is an alphabetical character and
                 #if so adds index to periodIndex
                 alphaFound = subChar.isalpha()
                 if alphaFound == True:
@@ -53,5 +53,6 @@ def output(updatedCharacterList):
 
 def main():
     userInput()
+    exit()
 
 main()
