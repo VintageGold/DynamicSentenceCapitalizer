@@ -32,7 +32,7 @@ def read_user_input(updated_user_input):
             for sub_char in updated_user_input[character_offset:]:
                 
                 # Tests whether character after period is an alphabetical character and
-                # if so adds index to periodIndex
+                # set index_capitalize to the char index
                 alpha_found = sub_char.isalpha()
                 if alpha_found:
                     index_capitalize = updated_user_input.find(sub_char, i)
