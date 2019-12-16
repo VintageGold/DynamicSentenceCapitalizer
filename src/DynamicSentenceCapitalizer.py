@@ -3,7 +3,7 @@ def user_input():
     read_user_input(user_text)
 
 
-# Capitalizes letter when char is the first alphabetical letter of a sentence
+# Capitalize letter when char is the first alphabetical letter of a sentence
 def capitalize_letter(letter):
     capital = letter.capitalize()
     return capital
