@@ -3,7 +3,7 @@ def user_input():
     read_user_input(user_text)
 
 
-# Capitalizes letter when char is the first alphabetical letter of a sentence
+# Capitalize letter when char is the first alphabetical letter of a sentence
 def capitalize_letter(letter):
     capital = letter.capitalize()
     return capital
@@ -16,7 +16,7 @@ def read_user_input(updated_user_input):
     i = 0
     index_capitalize = 0
 
-    # Reads through all characters in userInput to
+    # Read through all characters in userInput to
     # determine what will be capitalized and which will not.
     for char in updated_user_input:
 
@@ -24,7 +24,7 @@ def read_user_input(updated_user_input):
         if index_capitalize == i:
             character_list.append(capitalize_letter(char))
 
-        # Capitalizes first found letter after every period
+        # Capitalize first found letter after every period
         elif char in ('.', '!', '?'):
             character_offset = i + 1  # adds one to i so the period found in the loop before,
             # does not appear in the search loop below
@@ -36,15 +36,15 @@ def read_user_input(updated_user_input):
                     index_capitalize = updated_user_input.find(sub_char, i)
                     break
 
-            # Adds letter to be capitalized to characterList
+            # Add letter to be capitalized to characterList
             character_list.append(char)
 
         else:
-            # Adds letter to characterList
+            # Add letter to characterList
             character_list.append(char)
         i += 1
 
-    # Reads through indexes of the letters to be capitalized
+    # Read through indexes of the letters to be capitalized
     output(character_list)
 
 
