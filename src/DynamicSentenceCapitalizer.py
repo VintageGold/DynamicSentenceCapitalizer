@@ -28,11 +28,10 @@ def read_user_input(updated_user_input):
         elif char in ('.', '!', '?'):
             character_offset = i + 1  # adds one to i so the period found in the loop before,
                                       # does not appear in the search loop below
-                
+            
+            # Test whether character after punctuation is an alphabetical character and
+            # set index_capitalize to the char index
             for sub_char in updated_user_input[character_offset:]:
-                
-                # Tests whether character after period is an alphabetical character and
-                # set index_capitalize to the char index
                 alpha_found = sub_char.isalpha()
                 if alpha_found:
                     index_capitalize = updated_user_input.find(sub_char, i)
