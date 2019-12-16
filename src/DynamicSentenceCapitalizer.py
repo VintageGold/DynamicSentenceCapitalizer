@@ -24,7 +24,7 @@ def read_user_input(updated_user_input):
         if index_capitalize == i:
             character_list.append(capitalize_letter(char))
 
-        # Capitalize first found letter after every period
+        # Capitalize first found letter after punctuation
         elif char in ('.', '!', '?'):
             character_offset = i + 1  # adds one to i so the period found in the loop before,
             # does not appear in the search loop below
