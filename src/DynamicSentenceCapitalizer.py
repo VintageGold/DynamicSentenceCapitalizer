@@ -57,6 +57,7 @@ def output(updated_characterlist):
 
 def main():
     user_input()
+    exit()
 
 
 main()
