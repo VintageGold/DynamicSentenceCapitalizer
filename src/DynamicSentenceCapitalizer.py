@@ -3,7 +3,7 @@ def user_input():
     read_user_input(user_text)
 
 
-# Capitalize letter when char is the first alphabetical letter of a sentence
+# Capitalizes letter when char is the first alphabetical letter of a sentence
 def capitalize_letter(letter):
     capital = letter.capitalize()
     return capital
@@ -32,7 +32,7 @@ def read_user_input(updated_user_input):
                 # Tests whether character after period is an alphabetical character and
                 # if so adds index to periodIndex
                 alpha_found = sub_char.isalpha()
-                if alpha_found == True:
+                if alpha_found:
                     index_capitalize = updated_user_input.find(sub_char, i)
                     break
 
