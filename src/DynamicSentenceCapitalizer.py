@@ -1,6 +1,6 @@
 def user_input():
     user_text = input('Type in 3 sentences in lowercase, we will do the capitalization for you. ''\n')
-    read_user_input(user_text)
+    return user_text
 
 
 # Capitalize letter when char is the first alphabetical letter of a sentence
@@ -24,14 +24,13 @@ def read_user_input(updated_user_input):
         if index_capitalize == i:
             character_list.append(capitalize_letter(char))
 
-        # Capitalize first found letter after punctuation
+        # Capitalize first found letter after every period
         elif char in ('.', '!', '?'):
             character_offset = i + 1  # adds one to i so the period found in the loop before,
-                                      # does not appear in the search loop below
-            
-            # Test whether character after punctuation is an alphabetical character and
-            # set index_capitalize to the char index
+            # does not appear in the search loop below
             for sub_char in updated_user_input[character_offset:]:
+                # Tests whether character after period is an alphabetical character and
+                # if so adds index to periodIndex
                 alpha_found = sub_char.isalpha()
                 if alpha_found:
                     index_capitalize = updated_user_input.find(sub_char, i)
@@ -46,18 +45,21 @@ def read_user_input(updated_user_input):
         i += 1
 
     # Read through indexes of the letters to be capitalized
-    output(character_list)
+    return character_list
 
 
 def output(updated_characterlist):
     updated_sentence = ''
     updated_sentence = updated_sentence.join(updated_characterlist)
-    print(updated_sentence)
+    return updated_sentence
 
 
 def main():
-    user_input()
-    exit()
+    data = user_input()
+    character_list = read_user_input(data)
+    new_sentence = output(character_list)
+    print(new_sentence)
 
 
-main()
+if __name__ == '__main__':
+    main()
